@@ -66,8 +66,11 @@ function App() {
               </p>
             </div>
             <div className="a-news">
-              <h3>Hydrogen vs Electric Cars</h3>
-              <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+              <h3>is VC Funding Drying Up?</h3>
+              <p>
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
             </div>
           </aside>
         </section>
