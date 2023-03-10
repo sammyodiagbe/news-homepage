@@ -13,7 +13,21 @@ function App() {
           {showNavigation ? (
             <div className="menu">
               <ul>
-                <li></li>
+                <li>
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#new">New</a>
+                </li>
+                <li>
+                  <a href="#popular">Popular</a>
+                </li>
+                <li>
+                  <a href="#trending">Trending</a>
+                </li>
+                <li>
+                  <a href="#categories">Categories</a>
+                </li>
               </ul>
             </div>
           ) : (
@@ -21,7 +35,13 @@ function App() {
           )}
         </div>
       </nav>
-      <main className="main"></main>
+      <main className="main">
+        <section className="">
+          <aside className="left-main-content"></aside>
+          <aside className="right-aside-new"></aside>
+        </section>
+        <section className="top-news"></section>
+      </main>
     </>
   );
 }
