@@ -3,6 +3,8 @@ import Logo from "./components/logo";
 import MenuIcon from "./components/menuIcon";
 import mobileImage from "./assets/images/image-web-3-mobile.jpg";
 import retroPc from "./assets/images/image-retro-pcs.jpg";
+import topLaptops from "./assets/images/image-top-laptops.jpg";
+import gamingGrowth from "./assets/images/image-gaming-growth.jpg";
 
 function App() {
   const [showNavigation, setShowNavigation] = useState(false);
@@ -87,6 +89,23 @@ function App() {
               <h1 className="number">01</h1>
               <h4>Reviving Retro PCs</h4>
               <p>What happens when old PCs are given modern upgrades</p>
+            </div>
+          </div>
+          <div className="news">
+            <img src={topLaptops} alt="Top laptops of 2022" />
+            <div className="write-up">
+              <h1 className="number">02</h1>
+              <h4>Top 10 Laptops of 2022</h4>
+              <p>Our best picks for various needs and budgets.</p>
+            </div>
+          </div>
+          <div className="news">
+            <img src={gamingGrowth} alt="Gaming growth" />
+
+            <div className="write-up">
+              <h1 className="number">03</h1>
+              <h4>The Growth of Gaming</h4>
+              <p>How the pandemic has sparked fresh opportunities.</p>
             </div>
           </div>
         </section>
