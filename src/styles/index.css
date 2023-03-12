@@ -43,25 +43,25 @@ html nav.navigation div.container {
           align-items: center;
 }
 
-body main.main div.container section.head aside.left-main-content img,
-html main.main div.container section.head aside.left-main-content img {
+body main.main section.head aside.left-main-content img,
+html main.main section.head aside.left-main-content img {
   margin-bottom: 24px;
 }
 
-body main.main div.container section.head aside.left-main-content div.bottom h1,
-body main.main div.container section.head aside.left-main-content div.bottom p,
-html main.main div.container section.head aside.left-main-content div.bottom h1,
-html main.main div.container section.head aside.left-main-content div.bottom p {
+body main.main section.head aside.left-main-content div.bottom h1,
+body main.main section.head aside.left-main-content div.bottom p,
+html main.main section.head aside.left-main-content div.bottom h1,
+html main.main section.head aside.left-main-content div.bottom p {
   margin-bottom: 16px;
 }
 
-body main.main div.container section.head aside.left-main-content div.bottom h1,
-html main.main div.container section.head aside.left-main-content div.bottom h1 {
+body main.main section.head aside.left-main-content div.bottom h1,
+html main.main section.head aside.left-main-content div.bottom h1 {
   font-size: 40px;
 }
 
-body main.main div.container section.head aside.left-main-content div.bottom a,
-html main.main div.container section.head aside.left-main-content div.bottom a {
+body main.main section.head aside.left-main-content div.bottom a,
+html main.main section.head aside.left-main-content div.bottom a {
   display: inline-block;
   padding: 0.8em 1.5em;
   text-decoration: none;
@@ -69,5 +69,10 @@ html main.main div.container section.head aside.left-main-content div.bottom a {
   color: #fff;
   font-size: 0.8em;
   border-radius: 5px;
+}
+
+body main.main section.head aside.left-main-content aside.right-aside-new,
+html main.main section.head aside.left-main-content aside.right-aside-new {
+  background: #00001a;
 }
 /*# sourceMappingURL=index.css.map */
