@@ -44,7 +44,7 @@ html {
 
       div.menu {
         position: fixed;
-        min-height: 100vh;
+        height: 100vh;
         width: 100vw;
         background: rgba(0, 0, 0, 0.8);
         left: 0;
@@ -78,82 +78,143 @@ html {
   }
 
   main.main {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 64px;
-    section.head {
+    div.container {
       display: grid;
-      grid-template-rows: max-content max-content;
-      aside {
-        &.left-main-content {
-          padding: $padding;
-          img {
-            margin-bottom: $bottom-margin;
-          }
-
-          div.bottom {
-            h1,
-            p {
-              margin-bottom: $space-between-text-elem;
-            }
-            p {
-              line-height: 24px;
-              color: $foregroud-color;
-            }
-            h1 {
-              font-size: 40px;
-            }
-
-            a {
-              display: inline-block;
-              padding: 0.8em 1.5em;
-              text-decoration: none;
-              background: $call-to-action-color;
-              color: #fff;
-              font-size: 0.8em;
-              border-radius: 5px;
-            }
-          }
-        }
-      }
-    }
-
-    section.right-aside-new {
-      background: $dark-background;
-      padding: $padding;
-      h1.title {
-        color: $yellow;
-        font-size: 32px;
-        margin-bottom: $bottom-margin;
-      }
-
-      div.a-news {
-        margin-bottom: 29px;
-        h3 {
-          color: $almost-white;
-          margin-bottom: 8px;
-        }
-
-        p {
-          color: $silver;
-        }
-      }
-
-      hr {
-        margin-bottom: 31px;
-        border: 0.0002px solid $silver;
-      }
-    }
-
-    section.top-news {
-      display: grid;
-      padding: $padding;
       grid-template-columns: 1fr;
-      grid-row-gap: 32px;
-      div.news {
+      row-gap: 64px;
+      section.head {
         display: grid;
-        column-gap: 24px;
-        grid-template-columns: 35% 1fr;
+        grid-template-rows: max-content max-content;
+        aside {
+          &.left-main-content {
+            padding: $padding;
+            img {
+              margin-bottom: $bottom-margin;
+            }
+
+            div.bottom {
+              h1,
+              p {
+                margin-bottom: $space-between-text-elem;
+              }
+              p {
+                line-height: 24px;
+                color: $foregroud-color;
+              }
+              h1 {
+                font-size: 40px;
+              }
+
+              a {
+                display: inline-block;
+                padding: 0.8em 1.5em;
+                text-decoration: none;
+                background: $call-to-action-color;
+                color: #fff;
+                font-size: 0.8em;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+
+      section.right-aside-new {
+        background: $dark-background;
+        padding: $padding;
+        h1.title {
+          color: $yellow;
+          font-size: 32px;
+          margin-bottom: $bottom-margin;
+        }
+
+        div.a-news {
+          margin-bottom: 29px;
+          h3 {
+            color: $almost-white;
+            margin-bottom: 8px;
+          }
+
+          p {
+            color: $silver;
+          }
+        }
+
+        hr {
+          margin-bottom: 31px;
+          border: 0.0002px solid $silver;
+        }
+      }
+
+      section.top-news {
+        display: grid;
+        padding: $padding;
+        grid-template-columns: 1fr;
+        grid-row-gap: 32px;
+        div.news {
+          display: grid;
+          column-gap: 24px;
+          grid-template-columns: 35% 1fr;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    div.container {
+      width: 1110px;
+      margin: 0 auto;
+    }
+    nav.navigation {
+      button.icon {
+        display: none;
+      }
+      div.container {
+        width: 1110px;
+        margin: 0 auto;
+        div.menu {
+          position: static;
+          height: auto;
+
+          width: auto;
+          background: transparent;
+          display: block;
+          padding: 0;
+          ul {
+            padding: 0;
+            height: auto;
+            padding-left: 0;
+            li {
+              display: inline-block;
+              padding: 0 10px;
+              a {
+                color: $foregroud-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    main.main {
+      div.container {
+        grid-template-areas: "one one two" "three three three";
+        section {
+          &.head {
+            grid-area: one;
+            padding: 0;
+          }
+
+          &.right-aside-new {
+            grid-area: two;
+          }
+
+          &.top-news {
+            grid-area: three;
+          }
+        }
       }
     }
   }
