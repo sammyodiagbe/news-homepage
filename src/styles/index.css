@@ -57,11 +57,17 @@ body nav.navigation div.container div.menu,
 html nav.navigation div.container div.menu {
   position: fixed;
   height: 100vh;
+  display: none;
   width: 100vw;
   background: rgba(0, 0, 0, 0.8);
   left: 0;
   top: 0;
   padding-left: 25%;
+}
+
+body nav.navigation div.container div.menu.show,
+html nav.navigation div.container div.menu.show {
+  display: block;
 }
 
 body nav.navigation div.container div.menu ul,
@@ -102,6 +108,8 @@ html main.main div.container {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   row-gap: 64px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
 }
 
 body main.main div.container section.head,
@@ -113,36 +121,31 @@ html main.main div.container section.head {
       grid-template-rows: max-content max-content;
 }
 
-body main.main div.container section.head aside.left-main-content,
-html main.main div.container section.head aside.left-main-content {
-  padding: 1em;
-}
-
-body main.main div.container section.head aside.left-main-content img,
-html main.main div.container section.head aside.left-main-content img {
+body main.main div.container section.head img,
+html main.main div.container section.head img {
   margin-bottom: 24px;
 }
 
-body main.main div.container section.head aside.left-main-content div.bottom h1,
-body main.main div.container section.head aside.left-main-content div.bottom p,
-html main.main div.container section.head aside.left-main-content div.bottom h1,
-html main.main div.container section.head aside.left-main-content div.bottom p {
+body main.main div.container section.head div.bottom h1,
+body main.main div.container section.head div.bottom p,
+html main.main div.container section.head div.bottom h1,
+html main.main div.container section.head div.bottom p {
   margin-bottom: 16px;
 }
 
-body main.main div.container section.head aside.left-main-content div.bottom p,
-html main.main div.container section.head aside.left-main-content div.bottom p {
+body main.main div.container section.head div.bottom p,
+html main.main div.container section.head div.bottom p {
   line-height: 24px;
   color: #5e607a;
 }
 
-body main.main div.container section.head aside.left-main-content div.bottom h1,
-html main.main div.container section.head aside.left-main-content div.bottom h1 {
+body main.main div.container section.head div.bottom h1,
+html main.main div.container section.head div.bottom h1 {
   font-size: 40px;
 }
 
-body main.main div.container section.head aside.left-main-content div.bottom a,
-html main.main div.container section.head aside.left-main-content div.bottom a {
+body main.main div.container section.head div.bottom a,
+html main.main div.container section.head div.bottom a {
   display: inline-block;
   padding: 0.8em 1.5em;
   text-decoration: none;
@@ -184,7 +187,7 @@ html main.main div.container section.right-aside-new div.a-news p {
 body main.main div.container section.right-aside-new hr,
 html main.main div.container section.right-aside-new hr {
   margin-bottom: 31px;
-  border: 0.0002px solid #c5c6ce;
+  border: 0.0002px solid rgba(197, 198, 206, 0.3);
 }
 
 body main.main div.container section.top-news,
@@ -203,8 +206,34 @@ html main.main div.container section.top-news div.news {
   display: grid;
   -webkit-column-gap: 24px;
           column-gap: 24px;
-  -ms-grid-columns: 35% 1fr;
-      grid-template-columns: 35% 1fr;
+  -ms-grid-columns: 100px 1fr;
+      grid-template-columns: 100px 1fr;
+}
+
+body main.main div.container section.top-news div.news div.write-up,
+html main.main div.container section.top-news div.news div.write-up {
+  padding: 3px 0;
+}
+
+body main.main div.container section.top-news div.news div.write-up h1,
+html main.main div.container section.top-news div.news div.write-up h1 {
+  color: #c5c6ce;
+}
+
+body main.main div.container section.top-news div.news div.write-up h1,
+body main.main div.container section.top-news div.news div.write-up p,
+body main.main div.container section.top-news div.news div.write-up h4,
+html main.main div.container section.top-news div.news div.write-up h1,
+html main.main div.container section.top-news div.news div.write-up p,
+html main.main div.container section.top-news div.news div.write-up h4 {
+  margin-bottom: 0.3em;
+}
+
+body main.main div.container section.top-news div.news div.write-up p,
+body main.main div.container section.top-news div.news div.write-up h4,
+html main.main div.container section.top-news div.news div.write-up p,
+html main.main div.container section.top-news div.news div.write-up h4 {
+  color: #5e607a;
 }
 
 @media screen and (min-width: 1440px) {
@@ -241,6 +270,8 @@ html main.main div.container section.top-news div.news {
     font-size: 1em;
   }
   body main.main div.container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
         grid-template-areas: "one one two" "three three three";
   }
   body main.main div.container section.head {
@@ -249,6 +280,14 @@ html main.main div.container section.top-news div.news {
     -ms-grid-column-span: 2;
     grid-area: one;
     padding: 0;
+  }
+  body main.main div.container section.head div.bottom {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
   }
   body main.main div.container section.right-aside-new {
     -ms-grid-row: 1;

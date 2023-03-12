@@ -2,13 +2,14 @@ import { useState } from "react";
 import Logo from "./components/logo";
 import MenuIcon from "./components/menuIcon";
 import mobileImage from "./assets/images/image-web-3-mobile.jpg";
+import desktopImage from "./assets/images/image-web-3-desktop.jpg";
 import retroPc from "./assets/images/image-retro-pcs.jpg";
 import topLaptops from "./assets/images/image-top-laptops.jpg";
 import gamingGrowth from "./assets/images/image-gaming-growth.jpg";
 import IconMenuClose from "./components/iconMenuClose";
 
 function App() {
-  const [showNavigation, setShowNavigation] = useState(true);
+  const [showNavigation, setShowNavigation] = useState(false);
   return (
     <>
       <nav className="navigation">
@@ -45,22 +46,24 @@ function App() {
       <main className="main">
         <div className="container">
           <section className="head">
-            <aside className="left-main-content">
-              <img src={mobileImage} alt="gaming mobile" />
-              <div className="bottom">
-                <h1>The Bright Future of Web 3.0?</h1>
-                <div className="writeup">
-                  <p>
-                    We dive into the next evolution of the web that claims to
-                    put the power of the platforms back into the hands of the
-                    people. But is it really fulfilling its promise?
-                  </p>
-                  <a href="#read-more" className="btn">
-                    Read More
-                  </a>
-                </div>
+            <img
+              src={mobileImage}
+              srcSet={`${mobileImage} 320w, ${desktopImage} 1440w`}
+              alt="gaming mobile"
+            />
+            <div className="bottom">
+              <h1>The Bright Future of Web 3.0?</h1>
+              <div className="writeup">
+                <p>
+                  We dive into the next evolution of the web that claims to put
+                  the power of the platforms back into the hands of the people.
+                  But is it really fulfilling its promise?
+                </p>
+                <a href="#read-more" className="btn">
+                  Read More
+                </a>
               </div>
-            </aside>
+            </div>
           </section>
           <section className="right-aside-new">
             <h1 className="title">New</h1>
