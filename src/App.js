@@ -55,11 +55,12 @@ function App() {
             </div>
           </aside>
           <aside className="right-aside-new">
-            <h1>New</h1>
+            <h1 className="title">New</h1>
             <div className="a-news">
               <h3>Hydrogen vs Electric Cars</h3>
               <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
             </div>
+            <hr />
             <div className="a-news">
               <h3>The DownSides of AI Artistry</h3>
               <p>
@@ -67,6 +68,8 @@ function App() {
                 generation?
               </p>
             </div>
+            <hr />
+
             <div className="a-news">
               <h3>is VC Funding Drying Up?</h3>
               <p>

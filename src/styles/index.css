@@ -70,6 +70,12 @@ html main.main section.head aside.left-main-content div.bottom p {
   margin-bottom: 16px;
 }
 
+body main.main section.head aside.left-main-content div.bottom p,
+html main.main section.head aside.left-main-content div.bottom p {
+  line-height: 24px;
+  color: #5e607a;
+}
+
 body main.main section.head aside.left-main-content div.bottom h1,
 html main.main section.head aside.left-main-content div.bottom h1 {
   font-size: 40px;
@@ -89,5 +95,35 @@ html main.main section.head aside.left-main-content div.bottom a {
 body main.main section.head aside.right-aside-new,
 html main.main section.head aside.right-aside-new {
   background: #00001a;
+  padding: 1em;
+}
+
+body main.main section.head aside.right-aside-new h1.title,
+html main.main section.head aside.right-aside-new h1.title {
+  color: #e9aa52;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+body main.main section.head aside.right-aside-new div.a-news,
+html main.main section.head aside.right-aside-new div.a-news {
+  margin-bottom: 29px;
+}
+
+body main.main section.head aside.right-aside-new div.a-news h3,
+html main.main section.head aside.right-aside-new div.a-news h3 {
+  color: #fffdfa;
+  margin-bottom: 8px;
+}
+
+body main.main section.head aside.right-aside-new div.a-news p,
+html main.main section.head aside.right-aside-new div.a-news p {
+  color: #c5c6ce;
+}
+
+body main.main section.head aside.right-aside-new hr,
+html main.main section.head aside.right-aside-new hr {
+  margin-bottom: 31px;
+  border: 0.0002px solid #c5c6ce;
 }
 /*# sourceMappingURL=index.css.map */

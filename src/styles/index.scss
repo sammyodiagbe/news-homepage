@@ -58,6 +58,10 @@ html {
             p {
               margin-bottom: $space-between-text-elem;
             }
+            p {
+              line-height: 24px;
+              color: $foregroud-color;
+            }
             h1 {
               font-size: 40px;
             }
@@ -75,6 +79,29 @@ html {
         }
         &.right-aside-new {
           background: $dark-background;
+          padding: $padding;
+          h1.title {
+            color: $yellow;
+            font-size: 32px;
+            margin-bottom: $bottom-margin;
+          }
+
+          div.a-news {
+            margin-bottom: 29px;
+            h3 {
+              color: $almost-white;
+              margin-bottom: 8px;
+            }
+
+            p {
+              color: $silver;
+            }
+          }
+
+          hr {
+            margin-bottom: 31px;
+            border: 0.0002px solid $silver;
+          }
         }
       }
     }
