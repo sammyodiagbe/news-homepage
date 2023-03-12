@@ -126,4 +126,21 @@ html main.main section.head aside.right-aside-new hr {
   margin-bottom: 31px;
   border: 0.0002px solid #c5c6ce;
 }
+
+body main.main section.top-news,
+html main.main section.top-news {
+  display: -ms-grid;
+  display: grid;
+  padding: 1em;
+}
+
+body main.main section.top-news div.news,
+html main.main section.top-news div.news {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
+  -ms-grid-columns: 35% 1fr;
+      grid-template-columns: 35% 1fr;
+}
 /*# sourceMappingURL=index.css.map */

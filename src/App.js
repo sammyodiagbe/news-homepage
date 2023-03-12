@@ -2,6 +2,7 @@ import { useState } from "react";
 import Logo from "./components/logo";
 import MenuIcon from "./components/menuIcon";
 import mobileImage from "./assets/images/image-web-3-mobile.jpg";
+import retroPc from "./assets/images/image-retro-pcs.jpg";
 
 function App() {
   const [showNavigation, setShowNavigation] = useState(false);
@@ -79,7 +80,16 @@ function App() {
             </div>
           </aside>
         </section>
-        <section className="top-news"></section>
+        <section className="top-news">
+          <div className="news">
+            <img src={retroPc} alt="Reviving Retro PCs" />
+            <div className="write-up">
+              <h1 className="number">01</h1>
+              <h4>Reviving Retro PCs</h4>
+              <p>What happens when old PCs are given modern upgrades</p>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );

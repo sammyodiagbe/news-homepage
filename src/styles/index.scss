@@ -105,5 +105,15 @@ html {
         }
       }
     }
+
+    section.top-news {
+      display: grid;
+      padding: $padding;
+      div.news {
+        display: grid;
+        column-gap: 24px;
+        grid-template-columns: 35% 1fr;
+      }
+    }
   }
 }
