@@ -5,9 +5,10 @@ import mobileImage from "./assets/images/image-web-3-mobile.jpg";
 import retroPc from "./assets/images/image-retro-pcs.jpg";
 import topLaptops from "./assets/images/image-top-laptops.jpg";
 import gamingGrowth from "./assets/images/image-gaming-growth.jpg";
+import IconMenuClose from "./components/iconMenuClose";
 
 function App() {
-  const [showNavigation, setShowNavigation] = useState(false);
+  const [showNavigation, setShowNavigation] = useState(true);
   return (
     <>
       <nav className="navigation">
@@ -17,6 +18,12 @@ function App() {
           {showNavigation ? (
             <div className="menu">
               <ul>
+                <button
+                  className="icon"
+                  onClick={() => setShowNavigation(false)}
+                >
+                  <IconMenuClose />
+                </button>
                 <li>
                   <a href="#home">Home</a>
                 </li>
@@ -35,7 +42,9 @@ function App() {
               </ul>
             </div>
           ) : (
-            <MenuIcon />
+            <button className="icon" onClick={() => setShowNavigation(true)}>
+              <MenuIcon />
+            </button>
           )}
         </div>
       </nav>
@@ -57,30 +66,30 @@ function App() {
               </div>
             </div>
           </aside>
-          <aside className="right-aside-new">
-            <h1 className="title">New</h1>
-            <div className="a-news">
-              <h3>Hydrogen vs Electric Cars</h3>
-              <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-            </div>
-            <hr />
-            <div className="a-news">
-              <h3>The DownSides of AI Artistry</h3>
-              <p>
-                What are the possible adverse effects of on-demand AI image
-                generation?
-              </p>
-            </div>
-            <hr />
+        </section>
+        <section className="right-aside-new">
+          <h1 className="title">New</h1>
+          <div className="a-news">
+            <h3>Hydrogen vs Electric Cars</h3>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <hr />
+          <div className="a-news">
+            <h3>The DownSides of AI Artistry</h3>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <hr />
 
-            <div className="a-news">
-              <h3>is VC Funding Drying Up?</h3>
-              <p>
-                Private funding by VC firms is down 50% YOY. We take a look at
-                what that means.
-              </p>
-            </div>
-          </aside>
+          <div className="a-news">
+            <h3>is VC Funding Drying Up?</h3>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
         </section>
         <section className="top-news">
           <div className="news">

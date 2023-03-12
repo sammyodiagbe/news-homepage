@@ -26,7 +26,9 @@ html {
   svg {
     width: 30px;
   }
-
+  a {
+    text-decoration: none;
+  }
   img {
     max-width: 100%;
   }
@@ -34,18 +36,54 @@ html {
     padding: 1em;
   }
   nav.navigation {
+    padding: $padding 0;
     div.container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      div.menu {
+        position: fixed;
+        min-height: 100vh;
+        width: 100vw;
+        background: rgba(0, 0, 0, 0.8);
+        left: 0;
+        top: 0;
+        padding-left: 25%;
+        ul {
+          height: 100vh;
+          background: $almost-white;
+          padding: $padding;
+          padding-top: 20vh;
+          position: relative;
+          button.icon {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            background: transparent;
+          }
+          li {
+            list-style: none;
+            display: block;
+            padding: $padding 0;
+            a {
+              color: $foregroud-color;
+              font-size: 1.2em;
+              display: block;
+            }
+          }
+        }
+      }
     }
   }
 
   main.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 64px;
     section.head {
       display: grid;
       grid-template-rows: max-content max-content;
-      row-gap: 64px;
       aside {
         &.left-main-content {
           padding: $padding;
@@ -77,32 +115,33 @@ html {
             }
           }
         }
-        &.right-aside-new {
-          background: $dark-background;
-          padding: $padding;
-          h1.title {
-            color: $yellow;
-            font-size: 32px;
-            margin-bottom: $bottom-margin;
-          }
+      }
+    }
 
-          div.a-news {
-            margin-bottom: 29px;
-            h3 {
-              color: $almost-white;
-              margin-bottom: 8px;
-            }
+    section.right-aside-new {
+      background: $dark-background;
+      padding: $padding;
+      h1.title {
+        color: $yellow;
+        font-size: 32px;
+        margin-bottom: $bottom-margin;
+      }
 
-            p {
-              color: $silver;
-            }
-          }
-
-          hr {
-            margin-bottom: 31px;
-            border: 0.0002px solid $silver;
-          }
+      div.a-news {
+        margin-bottom: 29px;
+        h3 {
+          color: $almost-white;
+          margin-bottom: 8px;
         }
+
+        p {
+          color: $silver;
+        }
+      }
+
+      hr {
+        margin-bottom: 31px;
+        border: 0.0002px solid $silver;
       }
     }
 

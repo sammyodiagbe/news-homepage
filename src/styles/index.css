@@ -20,6 +20,11 @@ html svg {
   width: 30px;
 }
 
+body a,
+html a {
+  text-decoration: none;
+}
+
 body img,
 html img {
   max-width: 100%;
@@ -28,6 +33,11 @@ html img {
 body div.container,
 html div.container {
   padding: 1em;
+}
+
+body nav.navigation,
+html nav.navigation {
+  padding: 1em 0;
 }
 
 body nav.navigation div.container,
@@ -43,6 +53,57 @@ html nav.navigation div.container {
           align-items: center;
 }
 
+body nav.navigation div.container div.menu,
+html nav.navigation div.container div.menu {
+  position: fixed;
+  min-height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.8);
+  left: 0;
+  top: 0;
+  padding-left: 25%;
+}
+
+body nav.navigation div.container div.menu ul,
+html nav.navigation div.container div.menu ul {
+  height: 100vh;
+  background: #fffdfa;
+  padding: 1em;
+  padding-top: 20vh;
+  position: relative;
+}
+
+body nav.navigation div.container div.menu ul button.icon,
+html nav.navigation div.container div.menu ul button.icon {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background: transparent;
+}
+
+body nav.navigation div.container div.menu ul li,
+html nav.navigation div.container div.menu ul li {
+  list-style: none;
+  display: block;
+  padding: 1em 0;
+}
+
+body nav.navigation div.container div.menu ul li a,
+html nav.navigation div.container div.menu ul li a {
+  color: #5e607a;
+  font-size: 1.2em;
+  display: block;
+}
+
+body main.main,
+html main.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 64px;
+}
+
 body main.main section.head,
 html main.main section.head {
   display: -ms-grid;
@@ -50,7 +111,6 @@ html main.main section.head {
   -ms-grid-rows: max-content max-content;
       grid-template-rows: -webkit-max-content -webkit-max-content;
       grid-template-rows: max-content max-content;
-  row-gap: 64px;
 }
 
 body main.main section.head aside.left-main-content,
@@ -92,37 +152,37 @@ html main.main section.head aside.left-main-content div.bottom a {
   border-radius: 5px;
 }
 
-body main.main section.head aside.right-aside-new,
-html main.main section.head aside.right-aside-new {
+body main.main section.right-aside-new,
+html main.main section.right-aside-new {
   background: #00001a;
   padding: 1em;
 }
 
-body main.main section.head aside.right-aside-new h1.title,
-html main.main section.head aside.right-aside-new h1.title {
+body main.main section.right-aside-new h1.title,
+html main.main section.right-aside-new h1.title {
   color: #e9aa52;
   font-size: 32px;
   margin-bottom: 24px;
 }
 
-body main.main section.head aside.right-aside-new div.a-news,
-html main.main section.head aside.right-aside-new div.a-news {
+body main.main section.right-aside-new div.a-news,
+html main.main section.right-aside-new div.a-news {
   margin-bottom: 29px;
 }
 
-body main.main section.head aside.right-aside-new div.a-news h3,
-html main.main section.head aside.right-aside-new div.a-news h3 {
+body main.main section.right-aside-new div.a-news h3,
+html main.main section.right-aside-new div.a-news h3 {
   color: #fffdfa;
   margin-bottom: 8px;
 }
 
-body main.main section.head aside.right-aside-new div.a-news p,
-html main.main section.head aside.right-aside-new div.a-news p {
+body main.main section.right-aside-new div.a-news p,
+html main.main section.right-aside-new div.a-news p {
   color: #c5c6ce;
 }
 
-body main.main section.head aside.right-aside-new hr,
-html main.main section.head aside.right-aside-new hr {
+body main.main section.right-aside-new hr,
+html main.main section.right-aside-new hr {
   margin-bottom: 31px;
   border: 0.0002px solid #c5c6ce;
 }
