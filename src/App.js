@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Logo from "./assets/components/logo";
-import MenuIcon from "./assets/components/menuIcon";
+import Logo from "./components/logo";
+import MenuIcon from "./components/menuIcon";
 
 function App() {
   const [showNavigation, setShowNavigation] = useState(false);
