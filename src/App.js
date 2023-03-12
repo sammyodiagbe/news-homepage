@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Logo from "./components/logo";
 import MenuIcon from "./components/menuIcon";
+import mobileImage from "./assets/images/image-web-3-mobile.jpg";
 
 function App() {
   const [showNavigation, setShowNavigation] = useState(false);
@@ -37,8 +38,9 @@ function App() {
       </nav>
       <main className="main">
         <div className="container">
-          <section className="">
+          <section className="head">
             <aside className="left-main-content">
+              <img src={mobileImage} alt="gaming mobile" />
               <div className="bottom">
                 <h1>The Bright Future of Web 3.0?</h1>
                 <div className="writeup">

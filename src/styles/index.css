@@ -20,6 +20,11 @@ html svg {
   width: 30px;
 }
 
+body img,
+html img {
+  max-width: 100%;
+}
+
 body div.container,
 html div.container {
   padding: 1em;
@@ -36,5 +41,22 @@ html nav.navigation div.container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body main.main div.container section.head aside.left-main-content img,
+html main.main div.container section.head aside.left-main-content img {
+  margin-bottom: 24px;
+}
+
+body main.main div.container section.head aside.left-main-content div.bottom h1,
+body main.main div.container section.head aside.left-main-content div.bottom p,
+html main.main div.container section.head aside.left-main-content div.bottom h1,
+html main.main div.container section.head aside.left-main-content div.bottom p {
+  margin-bottom: 16px;
+}
+
+body main.main div.container section.head aside.left-main-content div.bottom h1,
+html main.main div.container section.head aside.left-main-content div.bottom h1 {
+  font-size: 40px;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
 
+$bottom-margin: 24px;
+$space-between-text-elem: 16px;
 * {
   paddding: 0;
   margin: 0;
@@ -16,6 +18,10 @@ html {
   svg {
     width: 30px;
   }
+
+  img {
+    max-width: 100%;
+  }
   div.container {
     padding: 1em;
   }
@@ -24,6 +30,28 @@ html {
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+  }
+
+  main.main {
+    div.container {
+      section.head {
+        aside.left-main-content {
+          img {
+            margin-bottom: $bottom-margin;
+          }
+
+          div.bottom {
+            h1,
+            p {
+              margin-bottom: $space-between-text-elem;
+            }
+            h1 {
+              font-size: 40px;
+            }
+          }
+        }
+      }
     }
   }
 }
