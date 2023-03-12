@@ -191,6 +191,7 @@ html {
               padding: 0 10px;
               a {
                 color: $foregroud-color;
+                font-size: 1em;
               }
             }
           }
@@ -213,6 +214,7 @@ html {
 
           &.top-news {
             grid-area: three;
+            grid-template-columns: repeat(3, 1fr);
           }
         }
       }

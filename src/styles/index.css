@@ -238,6 +238,7 @@ html main.main div.container section.top-news div.news {
   }
   body nav.navigation div.container div.menu ul li a {
     color: #5e607a;
+    font-size: 1em;
   }
   body main.main div.container {
         grid-template-areas: "one one two" "three three three";
@@ -259,6 +260,8 @@ html main.main div.container section.top-news div.news {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: three;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 /*# sourceMappingURL=index.css.map */
