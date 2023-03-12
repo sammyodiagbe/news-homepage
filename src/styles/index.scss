@@ -4,8 +4,10 @@ $bottom-margin: 24px;
 $space-between-text-elem: 16px;
 $call-to-action-color: #f15d51;
 $dark-background: #00001a;
+$padding: 1em;
+
 * {
-  paddding: 0;
+  padding: 0;
   margin: 0;
   border: none;
   outline: none;
@@ -37,32 +39,37 @@ html {
 
   main.main {
     section.head {
-      aside.left-main-content {
-        img {
-          margin-bottom: $bottom-margin;
+      display: grid;
+      grid-template-rows: max-content max-content;
+      row-gap: 64px;
+      aside {
+        &.left-main-content {
+          padding: $padding;
+          img {
+            margin-bottom: $bottom-margin;
+          }
+
+          div.bottom {
+            h1,
+            p {
+              margin-bottom: $space-between-text-elem;
+            }
+            h1 {
+              font-size: 40px;
+            }
+
+            a {
+              display: inline-block;
+              padding: 0.8em 1.5em;
+              text-decoration: none;
+              background: $call-to-action-color;
+              color: #fff;
+              font-size: 0.8em;
+              border-radius: 5px;
+            }
+          }
         }
-
-        div.bottom {
-          h1,
-          p {
-            margin-bottom: $space-between-text-elem;
-          }
-          h1 {
-            font-size: 40px;
-          }
-
-          a {
-            display: inline-block;
-            padding: 0.8em 1.5em;
-            text-decoration: none;
-            background: $call-to-action-color;
-            color: #fff;
-            font-size: 0.8em;
-            border-radius: 5px;
-          }
-        }
-
-        aside.right-aside-new {
+        &.right-aside-new {
           background: $dark-background;
         }
       }

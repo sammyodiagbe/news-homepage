@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
 * {
-  paddding: 0;
+  padding: 0;
   margin: 0;
   border: none;
   outline: none;
@@ -43,6 +43,21 @@ html nav.navigation div.container {
           align-items: center;
 }
 
+body main.main section.head,
+html main.main section.head {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: max-content max-content;
+      grid-template-rows: -webkit-max-content -webkit-max-content;
+      grid-template-rows: max-content max-content;
+  row-gap: 64px;
+}
+
+body main.main section.head aside.left-main-content,
+html main.main section.head aside.left-main-content {
+  padding: 1em;
+}
+
 body main.main section.head aside.left-main-content img,
 html main.main section.head aside.left-main-content img {
   margin-bottom: 24px;
@@ -71,8 +86,8 @@ html main.main section.head aside.left-main-content div.bottom a {
   border-radius: 5px;
 }
 
-body main.main section.head aside.left-main-content aside.right-aside-new,
-html main.main section.head aside.left-main-content aside.right-aside-new {
+body main.main section.head aside.right-aside-new,
+html main.main section.head aside.right-aside-new {
   background: #00001a;
 }
 /*# sourceMappingURL=index.css.map */
