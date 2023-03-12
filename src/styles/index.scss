@@ -2,6 +2,7 @@
 
 $bottom-margin: 24px;
 $space-between-text-elem: 16px;
+$call-to-action-color: #f15d51;
 * {
   paddding: 0;
   margin: 0;
@@ -48,6 +49,16 @@ html {
             }
             h1 {
               font-size: 40px;
+            }
+
+            a {
+              display: inline-block;
+              padding: 0.8em 1.5em;
+              text-decoration: none;
+              background: $call-to-action-color;
+              color: #fff;
+              font-size: 0.8em;
+              border-radius: 5px;
             }
           }
         }

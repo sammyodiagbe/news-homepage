@@ -59,4 +59,15 @@ body main.main div.container section.head aside.left-main-content div.bottom h1,
 html main.main div.container section.head aside.left-main-content div.bottom h1 {
   font-size: 40px;
 }
+
+body main.main div.container section.head aside.left-main-content div.bottom a,
+html main.main div.container section.head aside.left-main-content div.bottom a {
+  display: inline-block;
+  padding: 0.8em 1.5em;
+  text-decoration: none;
+  background: #f15d51;
+  color: #fff;
+  font-size: 0.8em;
+  border-radius: 5px;
+}
 /*# sourceMappingURL=index.css.map */
